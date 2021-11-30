@@ -36,7 +36,7 @@ function provisionOpenShiftOAuthUser() {
   TMP_KUBECONFIG="$WORKDIR/kubeconfig"
   cp "$KUBECONFIG" "$TMP_KUBECONFIG"
 
-  if oc login -u che-user -p user --kubeconfig $TMP_KUBECONFIG; then
+  if oc login -u dev -p dev --kubeconfig $TMP_KUBECONFIG; then
     echo "[INFO] Che User already exists. Using it"
     return 0
   fi
@@ -79,7 +79,7 @@ function provisionOpenShiftOAuthUser() {
   CURRENT_TIME=$(date +%s)
   ENDTIME=$(($CURRENT_TIME + 300))
   while [ $(date +%s) -lt $ENDTIME ]; do
-      if oc login -u che-user -p user --kubeconfig $TMP_KUBECONFIG; then
+      if oc login -u dev -p dev --kubeconfig $TMP_KUBECONFIG; then
           return 0
       fi
       sleep 10
