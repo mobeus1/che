@@ -24,13 +24,13 @@ spec:
         - name: TS_SELENIUM_DEVWORKSPACE_URL
           value: WORKSPACE_ROUTE
         - name: TS_SELENIUM_MULTIUSER
-          value: 'dev'
+          value: 'true'
         - name: TS_SELENIUM_LOG_LEVEL
           value: TRACE
         - name: TS_SELENIUM_OCP_USERNAME
           value: 'dev'
         - name: TS_SELENIUM_OCP_PASSWORD
-          value: "user"
+          value: "dev"
         - name: TS_SELENIUM_VALUE_OPENSHIFT_OAUTH
           value: 'true'
         - name: TS_SELENIUM_USERNAME
